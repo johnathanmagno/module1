@@ -25,7 +25,7 @@ let gitHubDefinition = 'GitHub is a cloud based version of Git - lets you push y
     It should be a string containing your best definition of what 'git init' does.
 */
 
-gitInitDefinition = 'Command to initialize (Init) your current directory as a Git Repository '
+gitInitDefinition = 'Command to initialize (Init) your current directory as a Git Repository.'
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -54,7 +54,7 @@ gitStatusDefinition = `Lets you view the current repo, see what's been staged vs
 
 gitAddDefinition = 'Adds designated changes so they can be commited (kind of like pointing the camera).'
 
-gitAddCode = git add .
+gitAddCode = 'git add .'
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -67,7 +67,7 @@ gitAddCode = git add .
 
 gitCommitDefinition = 'Takes the picture! Commits your code to the repo'
 
-gitCommitCode = git commit -m '"initial commit"'
+gitCommitCode = `git commit -m 'initial commit'`
 
 
 //////////////////PROBLEM 8////////////////////
