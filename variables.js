@@ -21,9 +21,9 @@ let lovesCode = true
 */
 
 if(faveNum === 13){
-  console.log(`'lucky 13!`)
+  console.log(`'lucky 13!'`)
 } else{
-    console.log(`'not lucky 13)`)
+    console.log(`'not lucky 13'`)
 }
 
 //////////////////PROBLEM 5////////////////////
@@ -36,4 +36,4 @@ for(let i = 0; i < 5; i++){
 
 
 
-DONE
+//DONE

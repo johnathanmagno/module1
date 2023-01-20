@@ -285,7 +285,16 @@ console.log(pinkPounds)
 // let pinkProfit =
 
 
+let fujiProfit = fujiPounds * fujiPrice
+console.log('$',fujiProfit)
 
+let galaProfit = galaPounds * galaPrice
+console.log('$',galaProfit)
+
+let pinkProfit = pinkPounds * pinkPrice
+console.log('$',pinkProfit)
+//Yo we made big money on apples lol
+//This one also seems simple - define profit, just multiply pounds by price.
 
 
 
@@ -299,4 +308,14 @@ console.log(pinkPounds)
     Log `totalProfit` to the console.
 */
 
-// CODE HERE
+let totalProfit = fujiProfit+galaProfit+pinkProfit
+console.log('$',totalProfit)
+//Finish adding everything together and here we go! Finished!
+
+//DONE
+let hoursSpent = 10//it was way more than 10
+let partyTime = true
+for(let i = 0; i < hourSpent; i++){
+    console.log('Is it party time???')
+    console.log(partyTime)
+}
