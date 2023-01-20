@@ -312,6 +312,7 @@ let totalProfit = fujiProfit+galaProfit+pinkProfit
 console.log('$',totalProfit)
 //Finish adding everything together and here we go! Finished!
 
+
 //DONE
 let hoursSpent = 10//it was way more than 10
 let partyTime = true

@@ -26,5 +26,4 @@ const implementation = "Onboarding/installation of the project"
 const testing = "Double checking and testing functionality between all involved units, systems, etc., as well as performance, expectations, etc."
 const maintain = "Ironing out bugs/errors that may present in unique situations & continued development between updates in languages and systems used to avoid obsolescence."
 
-
 //DONE
