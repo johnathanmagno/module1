@@ -50,33 +50,34 @@ const pinkPrice = .55
 */
 
 //ATTEMPT ONE//
-// let totalAcres = [];
-// for (let i = 0; i < fujiAcres.length; i++){
-//   totalAcres.push(fujiAcres[i]+galaAcres[i]+pinkAcres[i]);
-//   console.log(totalAcres)
-// }
-//Leaving this in here even though I know it's wrong - I thought this would work, I'm curious why it added the arrays the way it does?
-
+/*
+let totalAcres = [];
+    for (let i = 0; i < fujiAcres.length; i++){
+        totalAcres.push(fujiAcres[i]+galaAcres[i]+pinkAcres[i]);
+        console.log(totalAcres)
+}
+Leaving this in here even though I know it's wrong - I thought this would work, I'm curious why it added the arrays the way it does?
+*/
 
 //ATTEMPT TWO//
-//I'm concerned this isn't the best way to do this - originally my thought was to push everything together and add it, but I'm not quite sure how?
-// let fujiTotal = 0; //This seems simpler but more code, just defining the total for each acre
-// for (i = 0; i < fujiAcres.length; i++) { //cycling through the array until we reach the end (length determining)
-//   fujiTotal += fujiAcres[i]; //+= for addition, adding each entry in the fujiTotal array
-// }//then we repeat for Gala
-// let galaTotal = 0;
-// for (i = 0; i < galaAcres.length; i++) {
-//   galaTotal += galaAcres[i];
-// }//repeat again for Pink
-// let pinkTotal = 0;
-// for (i = 0; i < pinkAcres.length; i++) {
-//   pinkTotal += pinkAcres[i];
-// }//finally define totalAcres, add the 3 arrays together
-// let totalAcres = (fujiTotal + galaTotal + pinkTotal)
-
-// console.log(totalAcres)
-
 /*
+I'm concerned this isn't the best way to do this - originally my thought was to push everything together and add it, but I'm not quite sure how?
+let fujiTotal = 0; //This seems simpler but more code, just defining the total for each acre
+for (i = 0; i < fujiAcres.length; i++) { //cycling through the array until we reach the end (length determining)
+  fujiTotal += fujiAcres[i]; //+= for addition, adding each entry in the fujiTotal array
+}//then we repeat for Gala
+let galaTotal = 0;
+for (i = 0; i < galaAcres.length; i++) {
+  galaTotal += galaAcres[i];
+}//repeat again for Pink
+let pinkTotal = 0;
+for (i = 0; i < pinkAcres.length; i++) {
+  pinkTotal += pinkAcres[i];
+}//finally define totalAcres, add the 3 arrays together
+let totalAcres = (fujiTotal + galaTotal + pinkTotal)
+
+console.log(totalAcres)
+
 Since this is to learn, I'm leaving the code above - however on revisiting and a lot of Googling different videos, I think
 I've potentially figured out a better way - maybe I'm wrong, but we'll see. I'm including the notated code above for prosperity.
 */
@@ -84,9 +85,9 @@ I've potentially figured out a better way - maybe I'm wrong, but we'll see. I'm 
 
 //ATTEMPT 3 - THE FOLLOWING DAY//
 var allApples = [...fujiAcres, ...galaAcres, ...pinkAcres];//Using a spread operator to combine all the arrays together into one.
-let totalAcres = 0;
-for (i = 0; i < allApples.length; i++) {
-  totalAcres += allApples[i];
+let totalAcres = 0; //Same idea as the previous, setting the initial value before we add them all together
+for (i = 0; i < allApples.length; i++) {//[i]ndex starts at the first item in the array, continues until it's less than the length of the array (grabbing the whole array), incrementally adds 1 each time
+  totalAcres += allApples[i]; //+= adds the value to the right, so 0 + arrays
 }
 console.log(totalAcres)
 
@@ -103,10 +104,10 @@ console.log(totalAcres)
     Log `averageDailyAcres` to the console.
 */
 
-// CODE HERE
+let averageDailyAcres = (totalAcres / fujiAcres.length)//I was trying to find a way to have the week length dependent on the schedule
+console.log(averageDailyAcres)
 
-
-
+//Nothing too special with this one - the simpler while loops seem to read like a normal sentance (while acres is over 0, do x and y)
 
 
 // PROBLEM 3
@@ -140,6 +141,12 @@ console.log(totalAcres)
 
 let acresLeft = 174
 let days = 0
+
+while (acresLeft > 0){//should this all be in one bracket? It seems cleaner but runs into a negative for acres picked
+    days += 1//Incrementally adding 1 day,
+    acresLeft -= averageDailyAcres//Incrementally deducting the average of the acres
+  }
+  console.log(days)
 
 // CODE HERE
 
