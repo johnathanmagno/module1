@@ -50,18 +50,21 @@ const pinkPrice = .55
 */
 
 //ATTEMPT ONE//
-/*
-let totalAcres = [];
-    for (let i = 0; i < fujiAcres.length; i++){
-        totalAcres.push(fujiAcres[i]+galaAcres[i]+pinkAcres[i]);
-        console.log(totalAcres)
-}
-Leaving this in here even though I know it's wrong - I thought this would work, I'm curious why it added the arrays the way it does?
-*/
+
+// let totalAcres = [];
+//     for (let i = 0; i < fujiAcres.length; i++){
+//         totalAcres.push(fujiAcres[i]+galaAcres[i]+pinkAcres[i]);
+// }
+// console.log(totalAcres)
+
+//Leaving this in here even though I know it's wrong - I thought this would work, I'm curious why it added the arrays the way it does?
+//Chatted with Nathan - this does add every number together, but not a total (array becomes [8,10,11,7,9,9,9] instead of 63)
+
 
 //ATTEMPT TWO//
 /*
 I'm concerned this isn't the best way to do this - originally my thought was to push everything together and add it, but I'm not quite sure how?
+
 let fujiTotal = 0; //This seems simpler but more code, just defining the total for each acre
 for (i = 0; i < fujiAcres.length; i++) { //cycling through the array until we reach the end (length determining)
   fujiTotal += fujiAcres[i]; //+= for addition, adding each entry in the fujiTotal array
@@ -104,10 +107,9 @@ console.log(totalAcres)
     Log `averageDailyAcres` to the console.
 */
 
+
 let averageDailyAcres = (totalAcres / fujiAcres.length)//I was trying to find a way to have the week length dependent on the schedule
 console.log(averageDailyAcres)
-
-//Nothing too special with this one - the simpler while loops seem to read like a normal sentance (while acres is over 0, do x and y)
 
 
 // PROBLEM 3
@@ -139,6 +141,7 @@ console.log(averageDailyAcres)
 
 */
 
+
 let acresLeft = 174
 let days = 0
 
@@ -147,8 +150,7 @@ while (acresLeft > 0){//should this all be in one bracket? It seems cleaner but 
     acresLeft -= averageDailyAcres//Incrementally deducting the average of the acres
   }
   console.log(days)
-
-// CODE HERE
+//Nothing too special with this one - the simpler while loops seem to read like a normal sentence (while acres is over 0, do x and y)
 
 
 
@@ -178,12 +180,43 @@ while (acresLeft > 0){//should this all be in one bracket? It seems cleaner but 
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+//let fujiTons = 
+//let galaTons =
+//let pinkTons =
 
 
 
+let tonsPerAcre = 6.5
+let fujiCopy = fujiAcres.slice();
+let galaCopy = galaAcres.slice();
+let pinkCopy = pinkAcres.slice();
+console.log(fujiCopy);
+console.log(galaCopy);
+console.log(pinkCopy);
+
+let fujiTons = [];
+      for (i = 0; i < fujiCopy.length; i++){
+        fujiTons.push(fujiCopy[i] * tonsPerAcre)
+      }
+console.log(fujiTons)
+
+let galaTons = [];
+      for (i = 0; i < galaCopy.length; i++){
+        galaTons.push(galaCopy[i] * tonsPerAcre)
+      }
+console.log(galaTons)
+
+let pinkTons = [];
+      for (i = 0; i < pinkCopy.length; i++){
+        pinkTons.push(pinkCopy[i] * tonsPerAcre)
+      }
+console.log(pinkTons)
+/*
+      I did this in problem one (incorrectly), and chatted with Nathan briefly about why it didn't work for problem 1. Turns out I misplaced the console.log, but otherwise it seemed to work.
+      On reflection, it does not work for problem one, since it doesn't add all the numbers together, it just added all of the array numbers together.
+      I figured I could use similar logic - define i, incrementally add it up, and then push back into my new array each variable times 6.5
+      Rinse and repeat for all 3 variables.
+*/
 
 
 
@@ -210,8 +243,23 @@ while (acresLeft > 0){//should this all be in one bracket? It seems cleaner but 
 // let pinkPounds =
 
 
+let fujiPounds = 0;
+      for (i = 0; i < fujiTons.length; i++){
+        fujiPounds += fujiTons[i] * 2000;
+      }
+console.log(fujiPounds)
 
+let galaPounds = 0;
+      for (i = 0; i < galaTons.length; i++){
+        galaPounds += galaTons[i] * 2000;
+      }
+console.log(galaPounds)
 
+let pinkPounds = 0;
+      for (i = 0; i < pinkTons.length; i++){
+        pinkPounds += pinkTons[i] * 2000;
+      }
+console.log(pinkPounds)
 
 
 // PROBLEM 6
